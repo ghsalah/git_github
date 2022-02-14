@@ -1,0 +1,250 @@
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT
+$ git init
+Initialized empty Git repository in D:/MY SELF/GIT/.git/
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git remote add origin "https://github.com/ghsalah/git_github.git"
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git pull origin master
+fatal: couldn't find remote ref master
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ ^C
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git pull origin main
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.20 KiB | 4.00 KiB/s, done.
+From https://github.com/ghsalah/git_github
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        edu1.txt
+        edu2.txt
+        edu3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git add edu1.txt
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   edu1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        edu2.txt
+        edu3.txt
+
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git commit -m "adding first commit in local repo"
+[master 99c1e89] adding first commit in local repo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 edu1.txt
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        edu2.txt
+        edu3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   edu1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        edu2.txt
+        edu3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git add -A
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   edu1.txt
+        new file:   edu2.txt
+        new file:   edu3.txt
+
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git commit -a -m "adding 3 files togather"
+[master 1fb8131] adding 3 files togather
+ 3 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 edu2.txt
+ create mode 100644 edu3.txt
+
+a.salah@DESKTOP-MST9MUC MINGW64 /d/MY SELF/GIT (master)
+$ git log
+commit 1fb8131984bb88d98f8f888237fb2a597e18298c (HEAD -> master)
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:47:58 2022 +0530
+
+    adding 3 files togather
+
+commit 99c1e895c1b866c746cef5551322cb2e51be9476
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:44:28 2022 +0530
+
+    adding first commit in local repo
+
+commit c497ade58317b68aa9b2aff48f4b48e1353bc537 (origin/main)
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:59:42 2022 +0530
+
+    Update README.md
+
+commit 4e62ced8283a68d7c72bdf0b42d33dfc13968ce3
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:58:21 2022 +0530
+
+    Initial commit
+ ESCOD
+commit 1fb8131984bb88d98f8f888237fb2a597e18298c (HEAD -> master)
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:47:58 2022 +0530
+
+    adding 3 files togather
+
+commit 99c1e895c1b866c746cef5551322cb2e51be9476
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:44:28 2022 +0530
+
+    adding first commit in local repo
+
+commit c497ade58317b68aa9b2aff48f4b48e1353bc537 (origin/main)
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:59:42 2022 +0530
+
+    Update README.md
+
+commit 4e62ced8283a68d7c72bdf0b42d33dfc13968ce3
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:58:21 2022 +0530
+
+    Initial commit
+ ESCOD
+commit 1fb8131984bb88d98f8f888237fb2a597e18298c (HEAD -> master)
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:47:58 2022 +0530
+
+    adding 3 files togather
+
+commit 99c1e895c1b866c746cef5551322cb2e51be9476
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:44:28 2022 +0530
+
+    adding first commit in local repo
+
+commit c497ade58317b68aa9b2aff48f4b48e1353bc537 (origin/main)
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:59:42 2022 +0530
+
+    Update README.md
+
+commit 4e62ced8283a68d7c72bdf0b42d33dfc13968ce3
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:58:21 2022 +0530
+
+    Initial commit
+ ESCOD
+commit 1fb8131984bb88d98f8f888237fb2a597e18298c (HEAD -> master)
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:47:58 2022 +0530
+
+    adding 3 files togather
+
+commit 99c1e895c1b866c746cef5551322cb2e51be9476
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:44:28 2022 +0530
+
+    adding first commit in local repo
+
+commit c497ade58317b68aa9b2aff48f4b48e1353bc537 (origin/main)
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:59:42 2022 +0530
+
+    Update README.md
+
+commit 4e62ced8283a68d7c72bdf0b42d33dfc13968ce3
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:58:21 2022 +0530
+
+    Initial commit
+ ESCOD
+commit 1fb8131984bb88d98f8f888237fb2a597e18298c (HEAD -> master)
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:47:58 2022 +0530
+
+    adding 3 files togather
+
+commit 99c1e895c1b866c746cef5551322cb2e51be9476
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:44:28 2022 +0530
+
+    adding first commit in local repo
+
+commit c497ade58317b68aa9b2aff48f4b48e1353bc537 (origin/main)
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:59:42 2022 +0530
+
+    Update README.md
+
+commit 4e62ced8283a68d7c72bdf0b42d33dfc13968ce3
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:58:21 2022 +0530
+
+    Initial commit
+ ESCOD
+commit 1fb8131984bb88d98f8f888237fb2a597e18298c (HEAD -> master)
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:47:58 2022 +0530
+
+    adding 3 files togather
+
+commit 99c1e895c1b866c746cef5551322cb2e51be9476
+Author: ghsalah <salah121sias@gmail.com>
+Date:   Mon Feb 14 21:44:28 2022 +0530
+
+    adding first commit in local repo
+
+commit c497ade58317b68aa9b2aff48f4b48e1353bc537 (origin/main)
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:59:42 2022 +0530
+
+    Update README.md
+
+commit 4e62ced8283a68d7c72bdf0b42d33dfc13968ce3
+Author: ghsalah <99658661+ghsalah@users.noreply.github.com>
+Date:   Mon Feb 14 17:58:21 2022 +0530
+
+    Initial commit
+(END)
